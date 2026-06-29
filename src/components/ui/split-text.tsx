@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useGSAP } from '@/hooks/use-gsap';
 import { gsap, SplitText as GsapSplitText, ScrollTrigger } from '@/lib/gsap';
 import { cn } from '@/lib/utils';
@@ -21,6 +21,12 @@ export function SplitText({
   trigger?: boolean;
 }) {
   const ref = useRef<HTMLElement>(null);
+
+  // Always ensure the text is visible, even when motion is reduced or GSAP
+  // never runs, so headings can never be left hidden.
+  useEffect(() => {
+    if (ref.current) ref.current.style.visibility = 'visible';
+  }, []);
 
   useGSAP(() => {
     const el = ref.current;

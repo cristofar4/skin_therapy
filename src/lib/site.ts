@@ -32,6 +32,16 @@ export const site = {
   },
 };
 
+// Cinematic hero footage (free stock, CDN hosted). Each falls back to a
+// high quality poster photograph if the video fails to load, so the heroes
+// always look beautiful. Swap these for the spa's own footage in one place.
+export const media = {
+  homeVideo:
+    'https://assets.mixkit.co/videos/preview/mixkit-woman-getting-a-facial-treatment-with-a-towel-on-her-head-44537-large.mp4',
+  pageVideo:
+    'https://assets.mixkit.co/videos/preview/mixkit-hands-massaging-a-womans-shoulders-44539-large.mp4',
+};
+
 export const whatsappLink = (message?: string) =>
   `https://wa.me/${site.whatsapp}${
     message ? `?text=${encodeURIComponent(message)}` : ''

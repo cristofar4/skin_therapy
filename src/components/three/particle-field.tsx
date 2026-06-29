@@ -1,74 +1,113 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-function Particles({ count = 700 }: { count?: number }) {
-  const ref = useRef<THREE.Points>(null);
-
-  const positions = useRef<Float32Array>();
-  if (!positions.current) {
-    const arr = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      arr[i * 3] = (Math.random() - 0.5) * 14;
-      arr[i * 3 + 1] = (Math.random() - 0.5) * 14;
-      arr[i * 3 + 2] = (Math.random() - 0.5) * 8;
-    }
-    positions.current = arr;
-  }
-
-  useFrame((state, delta) => {
-    if (!ref.current) return;
-    ref.current.rotation.y += delta * 0.018;
-    ref.current.rotation.x += delta * 0.006;
-    const t = state.clock.getElapsedTime();
-    ref.current.position.y = Math.sin(t * 0.2) * 0.25;
-  });
-
-  return (
-    <points ref={ref}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={count}
-          array={positions.current}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.045}
-        color="#C9A86A"
-        transparent
-        opacity={0.55}
-        sizeAttenuation
-        depthWrite={false}
-        blending={THREE.AdditiveBlending}
-      />
-    </points>
-  );
-}
-
+/**
+ * Ambient luxury particle field rendered with vanilla Three.js (no react
+ * reconciler) for maximum runtime stability. Soft champagne particles drift
+ * gently behind the content, with subtle parallax toward the cursor.
+ */
 export function ParticleField() {
-  const [mounted, setMounted] = useState(false);
+  const mountRef = useRef<HTMLDivElement>(null);
+  const [enabled, setEnabled] = useState(false);
+
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduce) setMounted(true);
+    if (!reduce) setEnabled(true);
   }, []);
 
-  if (!mounted) return null;
+  useEffect(() => {
+    if (!enabled) return;
+    const mount = mountRef.current;
+    if (!mount) return;
 
-  return (
-    <div className="pointer-events-none fixed inset-0 z-0 opacity-70">
-      <Canvas
-        camera={{ position: [0, 0, 6], fov: 60 }}
-        gl={{ antialias: true, alpha: true }}
-        dpr={[1, 1.6]}
-      >
-        <ambientLight intensity={0.6} />
-        <pointLight position={[5, 5, 5]} intensity={0.8} color="#DCC290" />
-        <Particles />
-      </Canvas>
-    </div>
-  );
+    const width = () => mount.clientWidth;
+    const height = () => mount.clientHeight;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, width() / height(), 0.1, 100);
+    camera.position.z = 6;
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
+    renderer.setSize(width(), height());
+    renderer.setClearColor(0x000000, 0);
+    mount.appendChild(renderer.domElement);
+
+    // Particles
+    const count = window.innerWidth < 768 ? 380 : 720;
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 14;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 14;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const material = new THREE.PointsMaterial({
+      size: 0.05,
+      color: new THREE.Color('#C9A86A'),
+      transparent: true,
+      opacity: 0.55,
+      sizeAttenuation: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+
+    const points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    const light = new THREE.PointLight(0xdcc290, 0.8);
+    light.position.set(5, 5, 5);
+    scene.add(light);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+    // Pointer parallax
+    const pointer = { x: 0, y: 0 };
+    const onMove = (e: MouseEvent) => {
+      pointer.x = (e.clientX / window.innerWidth - 0.5) * 0.6;
+      pointer.y = (e.clientY / window.innerHeight - 0.5) * 0.6;
+    };
+    window.addEventListener('mousemove', onMove);
+
+    const clock = new THREE.Clock();
+    let frame = 0;
+    const animate = () => {
+      const t = clock.getElapsedTime();
+      points.rotation.y += 0.0018;
+      points.rotation.x += 0.0006;
+      points.position.y = Math.sin(t * 0.2) * 0.25;
+      camera.position.x += (pointer.x - camera.position.x) * 0.04;
+      camera.position.y += (-pointer.y - camera.position.y) * 0.04;
+      camera.lookAt(scene.position);
+      renderer.render(scene, camera);
+      frame = requestAnimationFrame(animate);
+    };
+    animate();
+
+    const onResize = () => {
+      camera.aspect = width() / height();
+      camera.updateProjectionMatrix();
+      renderer.setSize(width(), height());
+    };
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('resize', onResize);
+      geometry.dispose();
+      material.dispose();
+      renderer.dispose();
+      if (renderer.domElement.parentNode === mount) {
+        mount.removeChild(renderer.domElement);
+      }
+    };
+  }, [enabled]);
+
+  if (!enabled) return null;
+
+  return <div ref={mountRef} className="pointer-events-none fixed inset-0 z-0 opacity-70" />;
 }
