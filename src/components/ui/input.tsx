@@ -7,7 +7,7 @@ export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttribute
       type={type}
       ref={ref}
       className={cn(
-        'h-12 w-full rounded-full border border-charcoal/15 bg-white/60 px-5 text-sm text-charcoal placeholder:text-charcoal-light/70 transition-colors focus:border-champagne focus:outline-none focus:ring-2 focus:ring-champagne/30',
+        'h-12 w-full rounded-full border border-ivory/15 bg-ivory/5 px-5 text-sm text-ivory placeholder:text-ivory-dim/70 transition-colors focus:border-champagne focus:outline-none focus:ring-2 focus:ring-champagne/30',
         className
       )}
       {...props}
@@ -23,7 +23,7 @@ export const Textarea = React.forwardRef<
   <textarea
     ref={ref}
     className={cn(
-      'w-full rounded-3xl border border-charcoal/15 bg-white/60 px-5 py-4 text-sm text-charcoal placeholder:text-charcoal-light/70 transition-colors focus:border-champagne focus:outline-none focus:ring-2 focus:ring-champagne/30',
+      'w-full rounded-3xl border border-ivory/15 bg-ivory/5 px-5 py-4 text-sm text-ivory placeholder:text-ivory-dim/70 transition-colors focus:border-champagne focus:outline-none focus:ring-2 focus:ring-champagne/30',
       className
     )}
     {...props}
@@ -34,7 +34,7 @@ Textarea.displayName = 'Textarea';
 export function Label({ className, ...props }: React.LabelHTMLAttributes<HTMLLabelElement>) {
   return (
     <label
-      className={cn('mb-2 block text-xs uppercase tracking-[0.16em] text-charcoal-soft', className)}
+      className={cn('mb-2 block text-xs uppercase tracking-[0.16em] text-ivory-soft', className)}
       {...props}
     />
   );

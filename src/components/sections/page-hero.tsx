@@ -42,11 +42,11 @@ export function PageHero({
 
       <div className="container-luxe relative z-10">
         <span className="page-hero-eyebrow eyebrow text-champagne-light">{eyebrow}</span>
-        <SplitText as="h1" className="mt-5 max-w-4xl text-5xl text-cream md:text-7xl lg:text-8xl">
+        <SplitText as="h1" className="mt-5 max-w-4xl text-5xl text-ivory md:text-7xl lg:text-8xl">
           {title}
         </SplitText>
         {intro && (
-          <p className="page-hero-intro mt-6 max-w-xl text-pretty text-lg text-cream/75">{intro}</p>
+          <p className="page-hero-intro mt-6 max-w-xl text-pretty text-lg text-ivory/75">{intro}</p>
         )}
       </div>
     </section>

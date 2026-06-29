@@ -46,10 +46,10 @@ export function Storytelling() {
       <div className="container-luxe">
         <div className="mb-20 max-w-2xl">
           <span className="eyebrow">Our Philosophy</span>
-          <h2 className="mt-5 text-balance text-4xl text-charcoal md:text-6xl">
+          <h2 className="mt-5 text-balance text-4xl text-ivory md:text-6xl">
             Beauty begins the moment you exhale
           </h2>
-          <p className="mt-6 text-pretty text-lg text-charcoal-light">
+          <p className="mt-6 text-pretty text-lg text-ivory-dim">
             We believe true beauty is not applied, it is revealed. Through considered ritual,
             expert hands and a space designed for stillness, we help you return to your most
             radiant, confident self.
@@ -75,8 +75,8 @@ export function Storytelling() {
               </div>
               <div className="max-w-md">
                 <span className="font-serif text-7xl text-champagne/40">{p.no}</span>
-                <h3 className="mt-4 font-serif text-4xl text-charcoal md:text-5xl">{p.title}</h3>
-                <p className="mt-5 text-pretty text-lg leading-relaxed text-charcoal-light">
+                <h3 className="mt-4 font-serif text-4xl text-ivory md:text-5xl">{p.title}</h3>
+                <p className="mt-5 text-pretty text-lg leading-relaxed text-ivory-dim">
                   {p.text}
                 </p>
               </div>

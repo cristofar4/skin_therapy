@@ -14,7 +14,7 @@ export function Instagram() {
       <div className="container-luxe">
         <div className="mb-12 flex flex-col items-center text-center">
           <span className="eyebrow">Follow Our Journey</span>
-          <h2 className="mt-5 text-balance text-4xl text-charcoal md:text-6xl">
+          <h2 className="mt-5 text-balance text-4xl text-ivory md:text-6xl">
             Moments from the sanctuary
           </h2>
           <Link
@@ -35,8 +35,8 @@ export function Instagram() {
             className="group relative aspect-square overflow-hidden"
           >
             <Image src={img(id, 500)} alt="Instagram moment" fill sizes="20vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 flex items-center justify-center bg-charcoal/0 opacity-0 transition-all duration-500 group-hover:bg-charcoal/40 group-hover:opacity-100">
-              <InstaIcon className="h-7 w-7 text-cream" />
+            <div className="absolute inset-0 flex items-center justify-center bg-onyx/0 opacity-0 transition-all duration-500 group-hover:bg-onyx/40 group-hover:opacity-100">
+              <InstaIcon className="h-7 w-7 text-ivory" />
             </div>
           </Link>
         ))}

@@ -13,7 +13,7 @@ export function Marquee({
       <div className="flex shrink-0 animate-marquee items-center">
         {doubled.map((item, i) => (
           <span key={i} className="flex items-center">
-            <span className="px-8 font-serif text-3xl text-charcoal/80 md:text-5xl">{item}</span>
+            <span className="px-8 font-serif text-3xl text-ivory/80 md:text-5xl">{item}</span>
             <span className="text-champagne">✦</span>
           </span>
         ))}

@@ -47,7 +47,7 @@ export default function HomePage() {
         <TestimonialsCarousel />
       </section>
 
-      <section className="bg-beige-50/70 py-24">
+      <section className="bg-ink/70 py-24">
         <div className="container-luxe">
           <div className="mb-16 flex flex-col items-center text-center">
             <SectionHeading

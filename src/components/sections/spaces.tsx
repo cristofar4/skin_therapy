@@ -19,12 +19,12 @@ export function Spaces() {
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className="group flex w-full items-center justify-between gap-4 border-b border-charcoal/10 py-6 text-left"
+                className="group flex w-full items-center justify-between gap-4 border-b border-ivory/10 py-6 text-left"
               >
                 <div>
                   <span
                     className={`font-serif text-3xl transition-colors duration-300 md:text-4xl ${
-                      active === i ? 'text-champagne-deep' : 'text-charcoal'
+                      active === i ? 'text-champagne-deep' : 'text-ivory'
                     }`}
                   >
                     {s.name}
@@ -32,12 +32,12 @@ export function Spaces() {
                   <motion.p
                     initial={false}
                     animate={{ height: active === i ? 'auto' : 0, opacity: active === i ? 1 : 0 }}
-                    className="overflow-hidden text-sm text-charcoal-light"
+                    className="overflow-hidden text-sm text-ivory-dim"
                   >
                     <span className="block pt-2">{s.desc}</span>
                   </motion.p>
                 </div>
-                <span className="font-serif text-sm text-charcoal-light">
+                <span className="font-serif text-sm text-ivory-dim">
                   0{i + 1}
                 </span>
               </button>
@@ -56,9 +56,9 @@ export function Spaces() {
             className="absolute inset-0"
           >
             <Image src={img(s.image, 1200)} alt={s.name} fill sizes="60vw" className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-onyx/40 to-transparent" />
             <div className="absolute bottom-8 left-8">
-              <p className="font-serif text-3xl text-cream">{s.name}</p>
+              <p className="font-serif text-3xl text-ivory">{s.name}</p>
             </div>
           </motion.div>
         ))}

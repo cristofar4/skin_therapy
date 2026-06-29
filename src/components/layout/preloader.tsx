@@ -20,7 +20,7 @@ export function Preloader() {
     <AnimatePresence>
       {!done && (
         <motion.div
-          className="fixed inset-0 z-[9000] flex items-center justify-center bg-cream"
+          className="fixed inset-0 z-[9000] flex items-center justify-center bg-ink"
           exit={{ y: '-100%' }}
           transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
         >
@@ -44,8 +44,8 @@ export function Preloader() {
               transition={{ delay: 0.3 }}
               className="flex flex-col items-center"
             >
-              <span className="font-serif text-2xl text-charcoal">Skin Therapy</span>
-              <span className="text-[0.6rem] uppercase tracking-luxe text-charcoal-light">
+              <span className="font-serif text-2xl text-ivory">Skin Therapy</span>
+              <span className="text-[0.6rem] uppercase tracking-luxe text-ivory-dim">
                 Beauty and Spa
               </span>
             </motion.div>

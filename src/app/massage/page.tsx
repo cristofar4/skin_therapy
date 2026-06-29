@@ -36,7 +36,7 @@ export default function MassagePage() {
               eyebrow="Why Massage"
               title="More than indulgence, it is restoration"
             />
-            <p className="mt-6 text-pretty text-lg leading-relaxed text-charcoal-light">
+            <p className="mt-6 text-pretty text-lg leading-relaxed text-ivory-dim">
               In a world that rarely slows down, therapeutic massage is one of the most powerful
               forms of self care. Our therapists blend technique with intuition to leave you
               genuinely renewed.
@@ -48,7 +48,7 @@ export default function MassagePage() {
                     <span className="flex h-9 w-9 items-center justify-center rounded-full bg-champagne/20 font-serif text-champagne-deep">
                       0{i + 1}
                     </span>
-                    <span className="text-charcoal-soft">{b}</span>
+                    <span className="text-ivory-soft">{b}</span>
                   </li>
                 </Reveal>
               ))}

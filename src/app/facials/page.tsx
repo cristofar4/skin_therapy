@@ -40,10 +40,10 @@ export default function FacialsPage() {
         <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <Reveal key={s.no}>
-              <div className="h-full rounded-[1.75rem] border border-charcoal/10 bg-card p-8">
+              <div className="h-full rounded-[1.75rem] border border-ivory/10 bg-surface p-8">
                 <span className="font-serif text-5xl text-champagne/50">{s.no}</span>
-                <h3 className="mt-4 font-serif text-2xl text-charcoal">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-light">{s.text}</p>
+                <h3 className="mt-4 font-serif text-2xl text-ivory">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ivory-dim">{s.text}</p>
               </div>
             </Reveal>
           ))}

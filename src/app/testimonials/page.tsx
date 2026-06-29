@@ -32,7 +32,7 @@ export default function TestimonialsPage() {
         <TestimonialsCarousel />
       </section>
 
-      <section className="bg-beige-50/70 py-24">
+      <section className="bg-ink/70 py-24">
         <div className="container-luxe">
           <div className="mb-16 flex flex-col items-center text-center">
             <SectionHeading
@@ -46,16 +46,16 @@ export default function TestimonialsPage() {
                   <Star key={i} className="h-6 w-6 fill-champagne" />
                 ))}
               </div>
-              <span className="font-serif text-2xl text-charcoal">4.9 from 9,500 plus guests</span>
+              <span className="font-serif text-2xl text-ivory">4.9 from 9,500 plus guests</span>
             </div>
           </div>
 
           <RevealGroup className="columns-1 gap-6 md:columns-2 lg:columns-3 [&>*]:mb-6">
             {[...testimonials, ...testimonials].map((t, i) => (
               <Reveal key={i}>
-                <figure className="break-inside-avoid rounded-[1.75rem] bg-card p-8 shadow-soft">
+                <figure className="break-inside-avoid rounded-[1.75rem] bg-surface p-8 shadow-soft">
                   <Quote className="h-8 w-8 text-champagne/50" />
-                  <blockquote className="mt-4 text-pretty leading-relaxed text-charcoal-soft">
+                  <blockquote className="mt-4 text-pretty leading-relaxed text-ivory-soft">
                     {t.quote}
                   </blockquote>
                   <figcaption className="mt-6 flex items-center gap-4">
@@ -63,8 +63,8 @@ export default function TestimonialsPage() {
                       <Image src={img(t.image, 200)} alt={t.name} fill sizes="48px" className="object-cover" />
                     </div>
                     <div>
-                      <p className="font-serif text-lg text-charcoal">{t.name}</p>
-                      <p className="text-xs text-charcoal-light">{t.role}</p>
+                      <p className="font-serif text-lg text-ivory">{t.name}</p>
+                      <p className="text-xs text-ivory-dim">{t.role}</p>
                     </div>
                   </figcaption>
                 </figure>

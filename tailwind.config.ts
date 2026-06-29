@@ -49,6 +49,21 @@ const config: Config = {
           soft: '#27543F',
           mist: '#DDE7DD',
         },
+        // Dark theme core tokens
+        ink: {
+          DEFAULT: '#0B271C', // page background, deep emerald
+          deep: '#07190F',
+        },
+        onyx: '#06150E', // deepest panels and overlays
+        ivory: {
+          DEFAULT: '#F3ECDD', // primary light text and elements
+          soft: '#D8D0BF',
+          dim: '#A7AE9F',
+        },
+        surface: {
+          DEFAULT: '#123A2B', // lifted card surface
+          '2': '#19452F',
+        },
         cream: '#F8F5EE',
         warmwhite: '#FCFAF4',
         // shadcn tokens

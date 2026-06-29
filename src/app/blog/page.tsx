@@ -41,17 +41,17 @@ export default function BlogPage() {
                 sizes="50vw"
                 className="object-cover transition-transform [transition-duration:1200ms] group-hover:scale-105"
               />
-              <span className="absolute left-6 top-6 rounded-full bg-cream/90 px-4 py-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-charcoal">
+              <span className="absolute left-6 top-6 rounded-full bg-ink/90 px-4 py-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-ivory">
                 Featured
               </span>
             </div>
             <div>
               <span className="eyebrow">{featured.category}</span>
-              <h2 className="mt-5 font-serif text-4xl text-charcoal md:text-5xl">{featured.title}</h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-charcoal-light">
+              <h2 className="mt-5 font-serif text-4xl text-ivory md:text-5xl">{featured.title}</h2>
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-ivory-dim">
                 {featured.excerpt}
               </p>
-              <div className="mt-6 flex items-center gap-4 text-xs uppercase tracking-[0.14em] text-charcoal-light">
+              <div className="mt-6 flex items-center gap-4 text-xs uppercase tracking-[0.14em] text-ivory-dim">
                 <span>{featured.date}</span>
                 <span className="h-1 w-1 rounded-full bg-champagne" />
                 <span>{featured.readTime}</span>
@@ -84,11 +84,11 @@ export default function BlogPage() {
                 <span className="mt-5 text-xs uppercase tracking-[0.14em] text-champagne-deep">
                   {post.category}
                 </span>
-                <h3 className="mt-3 font-serif text-2xl text-charcoal transition-colors group-hover:text-champagne-deep">
+                <h3 className="mt-3 font-serif text-2xl text-ivory transition-colors group-hover:text-champagne-deep">
                   {post.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-light">{post.excerpt}</p>
-                <div className="mt-4 flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-charcoal-light">
+                <p className="mt-3 text-sm leading-relaxed text-ivory-dim">{post.excerpt}</p>
+                <div className="mt-4 flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-ivory-dim">
                   <span>{post.date}</span>
                   <span className="h-1 w-1 rounded-full bg-champagne" />
                   <span>{post.readTime}</span>

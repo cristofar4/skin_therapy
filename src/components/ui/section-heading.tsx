@@ -36,7 +36,7 @@ export function SectionHeading({
         as="h2"
         className={cn(
           'max-w-4xl text-balance text-4xl leading-[1.05] md:text-6xl',
-          light ? 'text-cream' : 'text-charcoal',
+          light ? 'text-ivory' : 'text-ivory',
           align === 'center' && 'mx-auto'
         )}
       >
@@ -47,7 +47,7 @@ export function SectionHeading({
           <p
             className={cn(
               'max-w-2xl text-pretty text-base leading-relaxed md:text-lg',
-              light ? 'text-cream/70' : 'text-charcoal-light',
+              light ? 'text-ivory/70' : 'text-ivory-dim',
               align === 'center' && 'mx-auto'
             )}
           >

@@ -16,7 +16,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
         <span
           className={cn(
             'font-serif text-xl tracking-wide',
-            light ? 'text-cream' : 'text-charcoal'
+            light ? 'text-ivory' : 'text-ivory'
           )}
         >
           Skin Therapy
@@ -24,7 +24,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
         <span
           className={cn(
             'text-[0.6rem] uppercase tracking-luxe',
-            light ? 'text-cream/60' : 'text-charcoal-light'
+            light ? 'text-ivory/60' : 'text-ivory-dim'
           )}
         >
           Beauty and Spa

@@ -51,11 +51,11 @@ export function HeroVideo({
 
       {overlay === 'dark' ? (
         <>
-          <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/45 to-cream/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/0 to-cream/0" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/45 to-ink/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/0 to-ink/0" />
         </>
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/35 to-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-onyx/85 via-onyx/35 to-onyx/20" />
       )}
     </div>
   );

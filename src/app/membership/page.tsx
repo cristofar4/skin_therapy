@@ -47,7 +47,7 @@ export default function MembershipPage() {
         <MembershipCards />
       </section>
 
-      <section className="bg-beige-50/70 py-24">
+      <section className="bg-ink/70 py-24">
         <div className="container-luxe">
           <div className="mb-14">
             <SectionHeading eyebrow="Compare" title="Find your perfect fit" />
@@ -61,7 +61,7 @@ export default function MembershipPage() {
                     <th
                       key={m.name}
                       className={`p-5 text-center font-serif text-xl ${
-                        m.featured ? 'text-champagne-deep' : 'text-charcoal'
+                        m.featured ? 'text-champagne-deep' : 'text-ivory'
                       }`}
                     >
                       {m.name}
@@ -71,15 +71,15 @@ export default function MembershipPage() {
               </thead>
               <tbody>
                 {compareRows.map((row) => (
-                  <tr key={row.label} className="border-t border-charcoal/10">
-                    <td className="p-5 text-sm text-charcoal-soft">{row.label}</td>
+                  <tr key={row.label} className="border-t border-ivory/10">
+                    <td className="p-5 text-sm text-ivory-soft">{row.label}</td>
                     {row.values.map((v, i) => (
-                      <td key={i} className="p-5 text-center text-sm text-charcoal">
+                      <td key={i} className="p-5 text-center text-sm text-ivory">
                         {typeof v === 'boolean' ? (
                           v ? (
                             <Check className="mx-auto h-5 w-5 text-champagne-deep" />
                           ) : (
-                            <Minus className="mx-auto h-4 w-4 text-charcoal-light/40" />
+                            <Minus className="mx-auto h-4 w-4 text-ivory-dim/40" />
                           )
                         ) : (
                           v

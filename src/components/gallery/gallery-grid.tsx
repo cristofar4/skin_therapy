@@ -30,8 +30,8 @@ export function GalleryGrid() {
             onClick={() => setFilter(c)}
             className={`rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.14em] transition-all duration-300 ${
               filter === c
-                ? 'bg-charcoal text-cream'
-                : 'border border-charcoal/20 text-charcoal hover:border-champagne'
+                ? 'bg-onyx text-ivory'
+                : 'border border-ivory/20 text-ivory hover:border-champagne'
             }`}
           >
             {c}
@@ -62,10 +62,10 @@ export function GalleryGrid() {
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform [transition-duration:1200ms] group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-charcoal/0 opacity-0 transition-all duration-500 group-hover:bg-charcoal/40 group-hover:opacity-100">
-                <Expand className="h-7 w-7 text-cream" />
+              <div className="absolute inset-0 flex items-center justify-center bg-onyx/0 opacity-0 transition-all duration-500 group-hover:bg-onyx/40 group-hover:opacity-100">
+                <Expand className="h-7 w-7 text-ivory" />
               </div>
-              <span className="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1 text-[0.6rem] uppercase tracking-[0.14em] text-charcoal opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute left-4 top-4 rounded-full bg-ink/90 px-3 py-1 text-[0.6rem] uppercase tracking-[0.14em] text-ivory opacity-0 transition-opacity group-hover:opacity-100">
                 {item.category}
               </span>
             </motion.button>
@@ -79,13 +79,13 @@ export function GalleryGrid() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[400] flex items-center justify-center bg-charcoal/95 p-4 backdrop-blur-md"
+            className="fixed inset-0 z-[400] flex items-center justify-center bg-onyx/95 p-4 backdrop-blur-md"
             onClick={() => setLightbox(null)}
           >
             <button
               onClick={() => setLightbox(null)}
               aria-label="Close gallery"
-              className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-cream/20 text-cream"
+              className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-ivory/20 text-ivory"
             >
               <X className="h-6 w-6" />
             </button>
@@ -95,7 +95,7 @@ export function GalleryGrid() {
                 next(-1);
               }}
               aria-label="Previous"
-              className="absolute left-4 flex h-12 w-12 items-center justify-center rounded-full border border-cream/20 text-cream md:left-10"
+              className="absolute left-4 flex h-12 w-12 items-center justify-center rounded-full border border-ivory/20 text-ivory md:left-10"
             >
               <ArrowLeft className="h-5 w-5" />
             </button>
@@ -120,7 +120,7 @@ export function GalleryGrid() {
                 next(1);
               }}
               aria-label="Next"
-              className="absolute right-4 flex h-12 w-12 items-center justify-center rounded-full border border-cream/20 text-cream md:right-10"
+              className="absolute right-4 flex h-12 w-12 items-center justify-center rounded-full border border-ivory/20 text-ivory md:right-10"
             >
               <ArrowRight className="h-5 w-5" />
             </button>

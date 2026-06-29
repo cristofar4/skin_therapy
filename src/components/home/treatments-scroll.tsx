@@ -37,18 +37,18 @@ export function TreatmentsScroll() {
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden bg-charcoal py-24 lg:h-screen lg:py-0">
+    <section ref={root} className="relative overflow-hidden bg-onyx py-24 lg:h-screen lg:py-0">
       <div className="container-luxe flex h-full flex-col justify-center">
         <div className="flex items-end justify-between gap-6 pt-10 lg:pt-0">
           <div className="max-w-xl">
             <span className="eyebrow text-champagne-light">The Treatment Menu</span>
-            <h2 className="mt-5 text-balance text-4xl text-cream md:text-6xl">
+            <h2 className="mt-5 text-balance text-4xl text-ivory md:text-6xl">
               Rituals crafted for every kind of radiance
             </h2>
           </div>
           <Link
             href="/treatments"
-            className="hidden shrink-0 items-center gap-2 text-xs uppercase tracking-[0.16em] text-cream/70 hover:text-champagne-light lg:flex"
+            className="hidden shrink-0 items-center gap-2 text-xs uppercase tracking-[0.16em] text-ivory/70 hover:text-champagne-light lg:flex"
           >
             View All <ArrowUpRight className="h-4 w-4" />
           </Link>
@@ -71,15 +71,15 @@ export function TreatmentsScroll() {
                 sizes="340px"
                 className="object-cover transition-transform [transition-duration:1200ms] group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/20 to-transparent" />
               <div className="absolute inset-x-6 bottom-6">
                 <span className="text-[0.65rem] uppercase tracking-[0.16em] text-champagne-light">
                   {t.category}
                 </span>
-                <h3 className="mt-2 font-serif text-2xl text-cream">{t.name}</h3>
-                <p className="mt-1 text-sm text-cream/60">From {formatNaira(t.priceFrom)}</p>
+                <h3 className="mt-2 font-serif text-2xl text-ivory">{t.name}</h3>
+                <p className="mt-1 text-sm text-ivory/60">From {formatNaira(t.priceFrom)}</p>
               </div>
-              <span className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-cream/90 text-charcoal opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <span className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-ink/90 text-ivory opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 <ArrowUpRight className="h-4 w-4" />
               </span>
             </Link>

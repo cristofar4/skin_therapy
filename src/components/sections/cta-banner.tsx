@@ -11,7 +11,7 @@ import { whatsappLink } from '@/lib/site';
 export function CtaBanner() {
   return (
     <section className="container-luxe py-24">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-charcoal px-8 py-20 text-center md:px-16 md:py-28">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-onyx px-8 py-20 text-center md:px-16 md:py-28">
         <Image
           src={img(images.philosophy, 1600)}
           alt="Serene spa ambience"
@@ -19,13 +19,13 @@ export function CtaBanner() {
           sizes="100vw"
           className="object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-onyx via-onyx/70 to-onyx/50" />
         <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-7">
           <span className="eyebrow text-champagne-light">Begin Your Ritual</span>
-          <SplitText as="h2" className="text-balance text-4xl text-cream md:text-6xl">
+          <SplitText as="h2" className="text-balance text-4xl text-ivory md:text-6xl">
             Your sanctuary is waiting in Port Harcourt
           </SplitText>
-          <p className="max-w-xl text-pretty text-cream/70">
+          <p className="max-w-xl text-pretty text-ivory/70">
             Reserve your moment of calm and let our therapists reveal the most radiant version of
             you. Every visit is a quiet return to yourself.
           </p>
@@ -35,7 +35,7 @@ export function CtaBanner() {
                 <Link href="/book">Book Appointment</Link>
               </Button>
             </Magnetic>
-            <Button asChild variant="outline" size="lg" className="border-cream/30 text-cream hover:text-champagne-light">
+            <Button asChild variant="outline" size="lg" className="border-ivory/30 text-ivory hover:text-champagne-light">
               <Link href={whatsappLink('Hello Skin Therapy, I would like to book a treatment.')} target="_blank">
                 Chat on WhatsApp
               </Link>

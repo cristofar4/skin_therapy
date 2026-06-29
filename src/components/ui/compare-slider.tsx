@@ -40,22 +40,22 @@ export function CompareSlider({
       onTouchMove={(e) => update(e.touches[0].clientX)}
     >
       <Image src={after} alt={afterAlt} fill className="object-cover" sizes="100vw" />
-      <div className="absolute right-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-cream backdrop-blur">
+      <div className="absolute right-5 top-5 rounded-full bg-onyx/70 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-ivory backdrop-blur">
         After
       </div>
 
       <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
         <Image src={before} alt={beforeAlt} fill className="object-cover" sizes="100vw" />
-        <div className="absolute left-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-cream backdrop-blur">
+        <div className="absolute left-5 top-5 rounded-full bg-onyx/70 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-ivory backdrop-blur">
           Before
         </div>
       </div>
 
       <div
-        className="absolute inset-y-0 z-10 flex w-1 items-center justify-center bg-cream"
+        className="absolute inset-y-0 z-10 flex w-1 items-center justify-center bg-ink"
         style={{ left: `calc(${pos}% - 2px)` }}
       >
-        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-charcoal/10 bg-cream shadow-luxe">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-ivory/10 bg-ink shadow-luxe">
           <span className="text-champagne-deep">⟷</span>
         </div>
       </div>

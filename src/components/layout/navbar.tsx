@@ -34,7 +34,7 @@ export function Navbar() {
       className={cn(
         'fixed inset-x-0 top-0 z-[100] transition-all duration-700',
         scrolled
-          ? 'border-b border-charcoal/5 bg-cream/85 py-3 backdrop-blur-xl'
+          ? 'border-b border-ivory/5 bg-ink/85 py-3 backdrop-blur-xl'
           : 'py-6'
       )}
     >
@@ -56,7 +56,7 @@ export function Navbar() {
                   href={item.href}
                   className={cn(
                     'flex items-center gap-1 rounded-full px-4 py-2 text-[0.8rem] uppercase tracking-[0.14em] transition-colors duration-300',
-                    active ? 'text-champagne-deep' : 'text-charcoal hover:text-champagne-deep'
+                    active ? 'text-champagne-deep' : 'text-ivory hover:text-champagne-deep'
                   )}
                 >
                   {item.label}
@@ -85,12 +85,12 @@ export function Navbar() {
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="group flex flex-col gap-0.5 rounded-2xl px-4 py-3 transition-colors duration-300 hover:bg-white/70"
+                              className="group flex flex-col gap-0.5 rounded-2xl px-4 py-3 transition-colors duration-300 hover:bg-ivory/10"
                             >
-                              <span className="font-serif text-lg text-charcoal transition-colors group-hover:text-champagne-deep">
+                              <span className="font-serif text-lg text-ivory transition-colors group-hover:text-champagne-deep">
                                 {child.label}
                               </span>
-                              <span className="text-xs text-charcoal-light">{child.desc}</span>
+                              <span className="text-xs text-ivory-dim">{child.desc}</span>
                             </Link>
                           ))}
                         </div>
@@ -117,9 +117,9 @@ export function Navbar() {
           className="flex flex-col items-end gap-1.5 lg:hidden"
           aria-label="Open navigation menu"
         >
-          <span className="h-px w-7 bg-charcoal" />
-          <span className="h-px w-5 bg-charcoal" />
-          <span className="h-px w-7 bg-charcoal" />
+          <span className="h-px w-7 bg-onyx" />
+          <span className="h-px w-5 bg-onyx" />
+          <span className="h-px w-7 bg-onyx" />
         </button>
       </nav>
 
@@ -130,13 +130,13 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-charcoal/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-[200] bg-onyx/95 backdrop-blur-xl lg:hidden"
           >
             <div className="container-luxe flex h-full flex-col py-6">
               <div className="flex items-center justify-between">
                 <Logo light />
                 <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
-                  <X className="h-7 w-7 text-cream" />
+                  <X className="h-7 w-7 text-ivory" />
                 </button>
               </div>
               <ul className="mt-12 flex flex-1 flex-col gap-1 overflow-y-auto">
@@ -149,17 +149,17 @@ export function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className="block py-3 font-serif text-3xl text-cream"
+                      className="block py-3 font-serif text-3xl text-ivory"
                     >
                       {item.label}
                     </Link>
                     {item.children && (
-                      <div className="ml-1 flex flex-col gap-2 border-l border-cream/15 pl-4 pb-3">
+                      <div className="ml-1 flex flex-col gap-2 border-l border-ivory/15 pl-4 pb-3">
                         {item.children.map((c) => (
                           <Link
                             key={c.href}
                             href={c.href}
-                            className="text-sm uppercase tracking-[0.14em] text-cream/60"
+                            className="text-sm uppercase tracking-[0.14em] text-ivory/60"
                           >
                             {c.label}
                           </Link>

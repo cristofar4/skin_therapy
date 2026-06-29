@@ -19,26 +19,26 @@ export function MembershipCards() {
           transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           className={`relative flex flex-col rounded-[2rem] p-8 ${
             m.featured
-              ? 'bg-charcoal text-cream shadow-luxe ring-1 ring-champagne/40'
-              : 'bg-card text-charcoal shadow-soft'
+              ? 'bg-onyx text-ivory shadow-luxe ring-1 ring-champagne/40'
+              : 'bg-surface text-ivory shadow-soft'
           }`}
         >
           {m.featured && (
-            <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-champagne px-4 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-charcoal">
+            <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-champagne px-4 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-ivory">
               <Crown className="h-3 w-3" /> Most Loved
             </span>
           )}
-          <h3 className={`font-serif text-2xl ${m.featured ? 'text-cream' : 'text-charcoal'}`}>
+          <h3 className={`font-serif text-2xl ${m.featured ? 'text-ivory' : 'text-ivory'}`}>
             {m.name}
           </h3>
-          <p className={`mt-2 text-sm ${m.featured ? 'text-cream/60' : 'text-charcoal-light'}`}>
+          <p className={`mt-2 text-sm ${m.featured ? 'text-ivory/60' : 'text-ivory-dim'}`}>
             {m.blurb}
           </p>
           <div className="mt-6 flex items-end gap-1">
             <span className="font-serif text-4xl text-champagne-deep">
               {formatNaira(m.price)}
             </span>
-            <span className={`mb-1 text-xs ${m.featured ? 'text-cream/50' : 'text-charcoal-light'}`}>
+            <span className={`mb-1 text-xs ${m.featured ? 'text-ivory/50' : 'text-ivory-dim'}`}>
               {m.period}
             </span>
           </div>
@@ -51,7 +51,7 @@ export function MembershipCards() {
                     m.featured ? 'text-champagne-light' : 'text-champagne-deep'
                   }`}
                 />
-                <span className={m.featured ? 'text-cream/80' : 'text-charcoal-soft'}>{perk}</span>
+                <span className={m.featured ? 'text-ivory/80' : 'text-ivory-soft'}>{perk}</span>
               </li>
             ))}
           </ul>

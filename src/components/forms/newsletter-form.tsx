@@ -23,12 +23,12 @@ export function NewsletterForm({ className }: { className?: string }) {
         type="email"
         placeholder="Your email address"
         {...register('email', { required: true, pattern: /^[^@\s]+@[^@\s]+\.[^@\s]+$/ })}
-        className="h-12 w-full rounded-full border border-cream/20 bg-cream/5 pl-5 pr-14 text-sm text-cream placeholder:text-cream/40 focus:border-champagne focus:outline-none"
+        className="h-12 w-full rounded-full border border-ivory/20 bg-ink/5 pl-5 pr-14 text-sm text-ivory placeholder:text-ivory/40 focus:border-champagne focus:outline-none"
       />
       <button
         type="submit"
         aria-label="Subscribe to newsletter"
-        className="absolute right-1.5 top-1.5 flex h-9 w-9 items-center justify-center rounded-full bg-champagne text-charcoal transition-transform hover:scale-105"
+        className="absolute right-1.5 top-1.5 flex h-9 w-9 items-center justify-center rounded-full bg-champagne text-ivory transition-transform hover:scale-105"
       >
         {done ? <Check className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
       </button>

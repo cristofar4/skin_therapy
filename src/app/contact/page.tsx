@@ -28,7 +28,7 @@ export default function ContactPage() {
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
             <SectionHeading eyebrow="Get In Touch" title="Send us a message" />
-            <p className="mt-5 text-pretty text-charcoal-light">
+            <p className="mt-5 text-pretty text-ivory-dim">
               Whether you have a question about a treatment or would like guidance choosing the
               perfect ritual, our concierge is here to help.
             </p>
@@ -48,19 +48,19 @@ export default function ContactPage() {
             <Link
               href={whatsappLink('Hello Skin Therapy, I would like to make an enquiry.')}
               target="_blank"
-              className="flex items-center justify-between rounded-[1.5rem] bg-charcoal p-6 text-cream transition-colors hover:bg-champagne-deep"
+              className="flex items-center justify-between rounded-[1.5rem] bg-onyx p-6 text-ivory transition-colors hover:bg-champagne-deep"
             >
               <div className="flex items-center gap-4">
                 <MessageCircle className="h-6 w-6 text-champagne-light" />
                 <div>
                   <p className="font-serif text-xl">Chat on WhatsApp</p>
-                  <p className="text-sm text-cream/60">We usually reply within minutes</p>
+                  <p className="text-sm text-ivory/60">We usually reply within minutes</p>
                 </div>
               </div>
               <span className="text-champagne-light">→</span>
             </Link>
 
-            <div className="overflow-hidden rounded-[1.5rem] border border-charcoal/10 shadow-soft">
+            <div className="overflow-hidden rounded-[1.5rem] border border-ivory/10 shadow-soft">
               <iframe
                 title="Skin Therapy Beauty and Spa location"
                 src={site.mapsEmbed}
@@ -76,11 +76,11 @@ export default function ContactPage() {
       </section>
 
       <section className="container-luxe pb-12">
-        <div className="rounded-[2rem] border border-charcoal/10 bg-beige-50/70 p-8 md:p-12">
+        <div className="rounded-[2rem] border border-ivory/10 bg-ink/70 p-8 md:p-12">
           <div className="grid gap-8 md:grid-cols-7">
             <div className="md:col-span-3">
-              <h3 className="font-serif text-3xl text-charcoal">Opening hours</h3>
-              <p className="mt-3 text-sm text-charcoal-light">
+              <h3 className="font-serif text-3xl text-ivory">Opening hours</h3>
+              <p className="mt-3 text-sm text-ivory-dim">
                 Drop in or book ahead. Sundays are reserved for private appointments.
               </p>
             </div>
@@ -88,10 +88,10 @@ export default function ContactPage() {
               {site.hours.map((h) => (
                 <li
                   key={h.day}
-                  className="flex items-center justify-between border-b border-charcoal/10 py-3 text-sm last:border-0"
+                  className="flex items-center justify-between border-b border-ivory/10 py-3 text-sm last:border-0"
                 >
-                  <span className="text-charcoal-soft">{h.day}</span>
-                  <span className="font-medium text-charcoal">{h.time}</span>
+                  <span className="text-ivory-soft">{h.day}</span>
+                  <span className="font-medium text-ivory">{h.time}</span>
                 </li>
               ))}
             </ul>
@@ -116,12 +116,12 @@ function ContactCard({
   href?: string;
 }) {
   const inner = (
-    <div className="h-full rounded-[1.5rem] border border-charcoal/10 bg-card p-6 transition-colors hover:border-champagne/50">
+    <div className="h-full rounded-[1.5rem] border border-ivory/10 bg-surface p-6 transition-colors hover:border-champagne/50">
       <span className="flex h-11 w-11 items-center justify-center rounded-full bg-champagne/20 text-champagne-deep [&>svg]:h-5 [&>svg]:w-5">
         {icon}
       </span>
-      <p className="mt-4 text-[0.65rem] uppercase tracking-[0.16em] text-charcoal-light">{label}</p>
-      <p className="mt-1 text-sm text-charcoal">{value}</p>
+      <p className="mt-4 text-[0.65rem] uppercase tracking-[0.16em] text-ivory-dim">{label}</p>
+      <p className="mt-1 text-sm text-ivory">{value}</p>
     </div>
   );
   return href ? <Link href={href}>{inner}</Link> : inner;

@@ -27,7 +27,7 @@ export function FloatingWidgets() {
         <div className="fixed inset-x-0 bottom-0 z-[120] p-4 lg:hidden">
           <Link
             href="/book"
-            className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-charcoal text-sm uppercase tracking-[0.18em] text-cream shadow-luxe"
+            className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-onyx text-sm uppercase tracking-[0.18em] text-ivory shadow-luxe"
           >
             <Calendar className="h-4 w-4" />
             Book Appointment
@@ -46,21 +46,21 @@ export function FloatingWidgets() {
               className="glass w-72 rounded-3xl p-5"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-charcoal font-serif">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-champagne text-ivory font-serif">
                   St
                 </span>
                 <div>
-                  <p className="font-serif text-lg leading-none text-charcoal">Skin Therapy</p>
+                  <p className="font-serif text-lg leading-none text-ivory">Skin Therapy</p>
                   <p className="text-xs text-green-600">Online now</p>
                 </div>
               </div>
-              <p className="mt-4 rounded-2xl bg-white/70 p-3 text-sm text-charcoal-soft">
+              <p className="mt-4 rounded-2xl bg-ivory/10 p-3 text-sm text-ivory-soft">
                 Hello and welcome. How may we help you feel beautiful today?
               </p>
               <Link
                 href={whatsappLink('Hello Skin Therapy, I have a question.')}
                 target="_blank"
-                className="mt-4 flex h-11 items-center justify-center rounded-full bg-charcoal text-xs uppercase tracking-[0.16em] text-cream"
+                className="mt-4 flex h-11 items-center justify-center rounded-full bg-onyx text-xs uppercase tracking-[0.16em] text-ivory"
               >
                 Continue on WhatsApp
               </Link>
@@ -76,7 +76,7 @@ export function FloatingWidgets() {
               exit={{ opacity: 0, scale: 0.5 }}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               aria-label="Back to top"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-charcoal/15 bg-cream/90 text-charcoal shadow-soft backdrop-blur transition-colors hover:bg-charcoal hover:text-cream"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-ivory/15 bg-ink/90 text-ivory shadow-soft backdrop-blur transition-colors hover:bg-onyx hover:text-ivory"
             >
               <ArrowUp className="h-4 w-4" />
             </motion.button>
@@ -86,7 +86,7 @@ export function FloatingWidgets() {
         <button
           onClick={() => setChatOpen((v) => !v)}
           aria-label="Open live chat"
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-champagne text-charcoal shadow-glow transition-transform hover:scale-105"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-champagne text-ivory shadow-glow transition-transform hover:scale-105"
         >
           {chatOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
         </button>

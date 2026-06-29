@@ -44,7 +44,7 @@ export default function AboutPage() {
               eyebrow="Who We Are"
               title="Luxury wellness, crafted with intention"
             />
-            <div className="mt-7 space-y-5 text-pretty text-lg leading-relaxed text-charcoal-light">
+            <div className="mt-7 space-y-5 text-pretty text-lg leading-relaxed text-ivory-dim">
               <p>
                 Skin Therapy began with a simple belief, that everyone deserves a place to be cared
                 for completely. A place where skincare is taken seriously, where the space is
@@ -73,16 +73,16 @@ export default function AboutPage() {
         <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
             <Reveal key={v.title}>
-              <div className="h-full rounded-[1.75rem] border border-charcoal/10 bg-card p-8">
-                <h3 className="font-serif text-2xl text-charcoal">{v.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-charcoal-light">{v.text}</p>
+              <div className="h-full rounded-[1.75rem] border border-ivory/10 bg-surface p-8">
+                <h3 className="font-serif text-2xl text-ivory">{v.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-ivory-dim">{v.text}</p>
               </div>
             </Reveal>
           ))}
         </RevealGroup>
       </section>
 
-      <section className="bg-beige-50/70 py-24">
+      <section className="bg-ink/70 py-24">
         <div className="container-luxe">
           <div className="mb-16 flex flex-col items-center text-center">
             <SectionHeading
@@ -105,8 +105,8 @@ export default function AboutPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="mt-6 font-serif text-2xl text-charcoal">{t.name}</h3>
-                  <p className="text-sm text-charcoal-light">{t.role}</p>
+                  <h3 className="mt-6 font-serif text-2xl text-ivory">{t.name}</h3>
+                  <p className="text-sm text-ivory-dim">{t.role}</p>
                   <p className="mt-1 text-xs uppercase tracking-[0.14em] text-champagne-deep">
                     {t.specialty}
                   </p>

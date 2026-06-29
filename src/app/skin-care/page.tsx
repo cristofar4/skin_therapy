@@ -47,8 +47,8 @@ export default function SkinCarePage() {
                 <CompareSlider before={img(item.before, 1000)} after={img(item.after, 1000)} />
                 <div className="max-w-md">
                   <span className="eyebrow">{item.weeks}</span>
-                  <h3 className="mt-4 font-serif text-4xl text-charcoal">{item.title}</h3>
-                  <p className="mt-5 text-pretty text-lg leading-relaxed text-charcoal-light">
+                  <h3 className="mt-4 font-serif text-4xl text-ivory">{item.title}</h3>
+                  <p className="mt-5 text-pretty text-lg leading-relaxed text-ivory-dim">
                     {item.note}
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function SkinCarePage() {
         </div>
       </section>
 
-      <section className="bg-beige-50/70 py-24">
+      <section className="bg-ink/70 py-24">
         <div className="container-luxe">
           <div className="mb-16">
             <SectionHeading
@@ -68,9 +68,9 @@ export default function SkinCarePage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {education.map((e) => (
-              <div key={e.title} className="rounded-[1.75rem] bg-card p-8 shadow-soft">
-                <h3 className="font-serif text-2xl text-charcoal">{e.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-charcoal-light">{e.text}</p>
+              <div key={e.title} className="rounded-[1.75rem] bg-surface p-8 shadow-soft">
+                <h3 className="font-serif text-2xl text-ivory">{e.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-ivory-dim">{e.text}</p>
               </div>
             ))}
           </div>

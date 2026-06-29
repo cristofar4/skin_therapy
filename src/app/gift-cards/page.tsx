@@ -31,20 +31,20 @@ export default function GiftCardsPage() {
       <section className="container-luxe py-24">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[2rem] bg-charcoal p-10 text-cream shadow-luxe">
+            <div className="relative overflow-hidden rounded-[2rem] bg-onyx p-10 text-ivory shadow-luxe">
               <div className="flex items-center justify-between">
                 <span className="font-serif text-2xl">Skin Therapy</span>
                 <Gift className="h-7 w-7 text-champagne-light" />
               </div>
-              <p className="mt-16 text-xs uppercase tracking-luxe text-cream/50">Gift Card</p>
+              <p className="mt-16 text-xs uppercase tracking-luxe text-ivory/50">Gift Card</p>
               <p className="mt-2 font-serif text-5xl text-champagne-light">{formatNaira(50000)}</p>
-              <p className="mt-6 text-sm text-cream/60">A moment of calm, beautifully given.</p>
+              <p className="mt-6 text-sm text-ivory/60">A moment of calm, beautifully given.</p>
             </div>
           </Reveal>
 
           <div>
             <SectionHeading eyebrow="Choose An Amount" title="The perfect gift, every time" />
-            <p className="mt-5 text-pretty text-charcoal-light">
+            <p className="mt-5 text-pretty text-ivory-dim">
               Whether a thank you, a celebration or a simple gesture of love, a Skin Therapy gift
               card is always treasured. Select an amount and we will craft a beautiful card to send.
             </p>
@@ -52,9 +52,9 @@ export default function GiftCardsPage() {
               {amounts.map((a) => (
                 <div
                   key={a}
-                  className="flex items-center justify-between rounded-2xl border border-charcoal/10 bg-card px-6 py-5"
+                  className="flex items-center justify-between rounded-2xl border border-ivory/10 bg-surface px-6 py-5"
                 >
-                  <span className="font-serif text-2xl text-charcoal">{formatNaira(a)}</span>
+                  <span className="font-serif text-2xl text-ivory">{formatNaira(a)}</span>
                   <Sparkles className="h-4 w-4 text-champagne-deep" />
                 </div>
               ))}
