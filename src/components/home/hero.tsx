@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-28">
       <HeroVideo
-        video={media.homeVideo}
+        sources={media.home}
         poster={img(images.hero, 2000)}
         alt="Luxury spa sanctuary at Skin Therapy Beauty and Spa"
         overlay="dark"

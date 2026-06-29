@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import type { VideoSource } from '@/lib/site';
 
 /**
  * Cinematic background that plays looping video over a poster photograph.
@@ -10,13 +11,13 @@ import { cn } from '@/lib/utils';
  * video cannot load, so the hero is always luminous.
  */
 export function HeroVideo({
-  video,
+  sources,
   poster,
   alt,
   overlay = 'dark',
   className,
 }: {
-  video: string;
+  sources: VideoSource[];
   poster: string;
   alt: string;
   overlay?: 'dark' | 'light';
@@ -43,7 +44,9 @@ export function HeroVideo({
           ready ? 'opacity-100' : 'opacity-0'
         )}
       >
-        <source src={video} type="video/mp4" />
+        {sources.map((s) => (
+          <source key={s.src} src={s.src} type={s.type} />
+        ))}
       </video>
 
       {overlay === 'dark' ? (

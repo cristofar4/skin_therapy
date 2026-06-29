@@ -32,14 +32,28 @@ export const site = {
   },
 };
 
-// Cinematic hero footage (free stock, CDN hosted). Each falls back to a
-// high quality poster photograph if the video fails to load, so the heroes
-// always look beautiful. Swap these for the spa's own footage in one place.
-export const media = {
-  homeVideo:
-    'https://assets.mixkit.co/videos/preview/mixkit-woman-getting-a-facial-treatment-with-a-towel-on-her-head-44537-large.mp4',
-  pageVideo:
-    'https://assets.mixkit.co/videos/preview/mixkit-hands-massaging-a-womans-shoulders-44539-large.mp4',
+// Cinematic hero footage. The self hosted, on brand motion gradient always
+// plays (no network needed). An optional stock clip is offered first for
+// browsers that support it, and a high quality poster photograph is the final
+// graceful fallback, so every hero is luminous and in motion. Swap these for
+// the spa's own footage in one place.
+export type VideoSource = { src: string; type: string };
+
+export const media: Record<'home' | 'page', VideoSource[]> = {
+  home: [
+    { src: '/video/hero-home.webm', type: 'video/webm' },
+    {
+      src: 'https://assets.mixkit.co/videos/preview/mixkit-woman-getting-a-facial-treatment-with-a-towel-on-her-head-44537-large.mp4',
+      type: 'video/mp4',
+    },
+  ],
+  page: [
+    { src: '/video/hero-page.webm', type: 'video/webm' },
+    {
+      src: 'https://assets.mixkit.co/videos/preview/mixkit-hands-massaging-a-womans-shoulders-44539-large.mp4',
+      type: 'video/mp4',
+    },
+  ],
 };
 
 export const whatsappLink = (message?: string) =>

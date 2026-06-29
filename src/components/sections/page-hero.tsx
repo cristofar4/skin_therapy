@@ -12,13 +12,13 @@ export function PageHero({
   title,
   intro,
   image,
-  video,
+  sources,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   image: string;
-  video?: string;
+  sources?: import('@/lib/site').VideoSource[];
 }) {
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -34,7 +34,7 @@ export function PageHero({
   return (
     <section className="relative flex min-h-[72vh] items-end overflow-hidden pb-16 pt-40">
       <HeroVideo
-        video={video ?? media.pageVideo}
+        sources={sources ?? media.page}
         poster={img(image, 1800)}
         alt={title}
         overlay="light"
