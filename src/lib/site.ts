@@ -39,21 +39,19 @@ export const site = {
 // the spa's own footage in one place.
 export type VideoSource = { src: string; type: string };
 
+// One real spa clip is shared across every hero (home and all navbar pages),
+// so the experience is consistent everywhere. The real footage plays first;
+// a palette matched motion gradient is the codec fallback; the poster
+// photograph is the final graceful fallback. To use the spa's own film, swap
+// HERO_VIDEO below.
+export const HERO_VIDEO: VideoSource = {
+  src: 'https://assets.mixkit.co/videos/preview/mixkit-young-woman-receiving-a-facial-massage-in-a-spa-44542-large.mp4',
+  type: 'video/mp4',
+};
+
 export const media: Record<'home' | 'page', VideoSource[]> = {
-  home: [
-    { src: '/video/hero-home.webm', type: 'video/webm' },
-    {
-      src: 'https://assets.mixkit.co/videos/preview/mixkit-woman-getting-a-facial-treatment-with-a-towel-on-her-head-44537-large.mp4',
-      type: 'video/mp4',
-    },
-  ],
-  page: [
-    { src: '/video/hero-page.webm', type: 'video/webm' },
-    {
-      src: 'https://assets.mixkit.co/videos/preview/mixkit-hands-massaging-a-womans-shoulders-44539-large.mp4',
-      type: 'video/mp4',
-    },
-  ],
+  home: [HERO_VIDEO, { src: '/video/hero-home.webm', type: 'video/webm' }],
+  page: [HERO_VIDEO, { src: '/video/hero-page.webm', type: 'video/webm' }],
 };
 
 export const whatsappLink = (message?: string) =>

@@ -29,7 +29,14 @@ export function ParticleField() {
     const camera = new THREE.PerspectiveCamera(60, width() / height(), 0.1, 100);
     camera.position.z = 6;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // Guard against environments where WebGL is unavailable so the particle
+    // background can never throw a client side exception.
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+    } catch {
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
     renderer.setSize(width(), height());
     renderer.setClearColor(0x000000, 0);

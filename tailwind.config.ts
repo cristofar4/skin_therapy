@@ -15,31 +15,42 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Luxury wellness palette
+        // Luxury wellness palette — Emerald & Gold
+        // Warm ivory and sand grounds
         beige: {
-          50: '#FBF8F4',
-          100: '#F6F0E8',
-          200: '#EFE6D8',
-          300: '#E4D6C1',
-          400: '#D6C2A6',
+          50: '#FAF7F0',
+          100: '#F2ECE0',
+          200: '#E7DDC9',
+          300: '#D7C8AC',
+          400: '#C3AE8B',
         },
+        // Champagne gold accent
         champagne: {
-          DEFAULT: '#C9A86A',
-          light: '#DCC290',
-          deep: '#A8854B',
+          DEFAULT: '#C0A062',
+          light: '#D8BE8A',
+          deep: '#9A7B43',
         },
+        // Soft clay rose for gentle warmth and validation states
         blush: {
-          DEFAULT: '#E7C9C2',
-          light: '#F3E1DC',
-          deep: '#D2A89E',
+          DEFAULT: '#C99A86',
+          light: '#E6CFC2',
+          deep: '#A9745C',
         },
+        // Deep emerald, used for primary text and immersive dark sections
         charcoal: {
-          DEFAULT: '#2B2724',
-          soft: '#4A443E',
-          light: '#6E665D',
+          DEFAULT: '#123A2C',
+          soft: '#2C4C40',
+          light: '#5A6A60',
         },
-        cream: '#FCFAF6',
-        warmwhite: '#FEFCF9',
+        // Signature emerald scale
+        emerald: {
+          DEFAULT: '#13412F',
+          deep: '#0C2A1F',
+          soft: '#27543F',
+          mist: '#DDE7DD',
+        },
+        cream: '#F8F5EE',
+        warmwhite: '#FCFAF4',
         // shadcn tokens
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
